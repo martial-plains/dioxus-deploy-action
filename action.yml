@@ -35,7 +35,7 @@ runs:
     - uses: Swatinem/rust-cache@v2
     - name: Install Dioxus-CLI
       shell: bash
-      run: cargo install dioxus-cli
+      run: cargo install dioxus-cli@0.6.0-alpha.2
 
     - name: Build Project 🎁
       shell: bash
@@ -46,4 +46,4 @@ runs:
       with:
         branch: gh-pages
         folder: ${{ inputs.rootPath }}/${{ inputs.outDirectory }}
-        clean: false
+        clean: true
